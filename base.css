@@ -7,7 +7,9 @@ html, body {
     font:1em/1.5 'Roboto',sans-serif;
     height: 100%;
 }
-
+p{
+    display:inline;
+}
 .container {
     display:grid;
     grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 1fr [eighth-line] 4em [ninth-line];
@@ -30,17 +32,15 @@ header{
 
 section{
     grid-area: section;
-    background-color: blue;
+    background-color: #c81b37;
 }
 
 article{
     grid-area: article;
-    background-color:green;
 }
 
 footer{
     grid-area: footer;
-    background-color: yellow;
 }
 
 
@@ -48,8 +48,16 @@ footer{
 
 @media screen and (min-width:1200px) {
     .container{
-        width:70em;
-        margin: 0 auto;
+        margin: 0 ;
         grid-template-columns: [first-line] 1fr [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 1fr [eaighth-line] 1fr [ninth-line] 1fr [tenth-line] 1fr [eleventh-line] 1fr [twelveth-line] 1fr [thirteenth-line];
+        grid-template-areas:
+        "header header header header header header header header header header header header "
+        "section section section section section section section section section section section section "
+        "article article article article article article article article article article article article "
+        "footer footer footer footer footer footer footer footer footer footer footer footer ";
+    }
+    .logo{
+        text-decoration:none;
+        color:#FFF;
     }
 }
