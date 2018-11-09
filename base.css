@@ -12,28 +12,38 @@ p{
 }
 .container {
     display:grid;
-    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 1fr [eighth-line] 4em [ninth-line];
-    grid-template-rows: [first-row] 2.5em [second-row] 4em [third-row] 2.5em [fourth-row] 14em [fifth-row] 1fr [sixth-row] 21.5em [seventh-row];
+    grid-template-columns: [first-line] 1fr [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] ;
+    grid-template-rows: 8.5em 144em 1fr 21.5em ;
     height: 100%;
     width: 100%;
     grid-template-areas:
-        "header header header header header header header header "
-        "header header header header header header header header "
-        "header header header header header header header header "
-        "section section section section section section section section"
-        "article article article article article article article article"
-        "footer footer footer footer footer footer footer footer";
+        "header header header header "
+        "section section section section"
+        "article article article article"
+        "footer footer footer footer";
             
 }
 
 header{
     grid-area: header;
     background-color: #c81b37;
+    display:grid;
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 7.5em [eighth-line] 4em [ninth-line];
+    grid-template-rows: 2.5em 3.5em 2.5em;
+    grid-template-areas:
+        ". . . . . . . ."
+        ". logo . . . translate lines ."
+        ". . . . . . . .";
+
 }
 
 section{
     grid-area: section;
     background-color: #c81b37;
+    display: grid;
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line];
+    grid-template-rows: [first-row] 0em [second-row] 32em [third-row] 32em [fourth-row] 16em [fifth-row] 1fr [sixth-row];
+    row-gap: 3.5em;
 }
 
 article{
@@ -45,18 +55,50 @@ footer{
 }
 
 .logo{
-    grid-column: second-line / third-line;
-    grid-row: second-row / third-row;
+    grid-area: logo;
     margin: 0;
     width: 3.5em;
     height: 3.5em;
 }
 
 .translate {
-    grid-column: sixth-line / sevent-line;
-    grid-row: second-row / third-row;
+    grid-area: translate;
+    justify-self: end;
 }
 
+.lines {
+    grid-area: lines;
+    justify-self: end;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+#naslov {
+    color:#FFF;
+    grid-column: second-line / third-line;
+    grid-row: second-row / third-row;
+    font-size: 7em;
+    margin: 0;
+}
+
+#podnaslov {
+    color: #FFF;
+    grid-column: second-line / third-line;
+    grid-row: third-row / fourth-row;
+    font-size:3em;
+    margin:0;
+}
+
+.fb-like {
+    grid-column: second-line / third-line;
+    grid-row: fourth-row / fifth-row;
+    height: 1em;
+}
+
+.slack{
+    grid-column: second-line / third-line;
+    grid-row: fifth-row / sixth-row;
+}
 
 @media screen and (min-width:1200px) {
     .container{

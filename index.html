@@ -7,16 +7,33 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
 </head>
 <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
         <header>
-            <a href="#" class="logo"><img src="logo.svg" alt="logo"><p><b>Кикиндска Технолошка Заједница</b></p></a>
             <div class="logo">
                 <a href="#"><img src="logo.svg" alt="logo"></a>
             </div>
             <img src="translate.svg" alt="translate" class="translate">
+            <div class="lines">
+                <a href="#"><img src="2-lines.svg" alt="2-lines"></a>
+            </header>
         </header>
         <section>
-
+            <h1 id="naslov">Заједница дигиталне Кикинде</h1>
+            <h2 id="podnaslov">Људи и предузећа, окупљени око заједничког циља - дељења знања,
+                развоја,
+                међусобне подршке и заједничког напретка.</h2>
+            <div class="fb-like" data-href="https://www.facebook.com/ktz.rs/" data-width="46" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+            <div class="slack"> 
+                <script async defer src="https://slack.ktz.rs/slackin.js"></script>
+            </div>
         </section>
         <article>
 
