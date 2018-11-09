@@ -13,15 +13,16 @@ p{
 .container {
     display:grid;
     grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 1fr [eighth-line] 4em [ninth-line];
-    grid-template-rows: 3.5em 14em 1fr 21.5em;
+    grid-template-rows: [first-row] 2.5em [second-row] 4em [third-row] 2.5em [fourth-row] 14em [fifth-row] 1fr [sixth-row] 21.5em [seventh-row];
     height: 100%;
     width: 100%;
     grid-template-areas:
         "header header header header header header header header "
+        "header header header header header header header header "
+        "header header header header header header header header "
         "section section section section section section section section"
         "article article article article article article article article"
         "footer footer footer footer footer footer footer footer";
-    align-items: stretch;
             
 }
 
@@ -43,7 +44,18 @@ footer{
     grid-area: footer;
 }
 
+.logo{
+    grid-column: second-line / third-line;
+    grid-row: second-row / third-row;
+    margin: 0;
+    width: 3.5em;
+    height: 3.5em;
+}
 
+.translate {
+    grid-column: sixth-line / sevent-line;
+    grid-row: second-row / third-row;
+}
 
 
 @media screen and (min-width:1200px) {
