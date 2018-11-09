@@ -10,15 +10,15 @@ html, body {
 
 .container {
     display:grid;
-    grid-template-columns: [first-line] 1fr [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line];
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 1fr [eighth-line] 4em [ninth-line];
     grid-template-rows: 3.5em 14em 1fr 21.5em;
     height: 100%;
     width: 100%;
     grid-template-areas:
-        "header header header header"
-        "section section section section"
-        "article article article article"
-        "footer footer footer footer";
+        "header header header header header header header header "
+        "section section section section section section section section"
+        "article article article article article article article article"
+        "footer footer footer footer footer footer footer footer";
     align-items: stretch;
             
 }
@@ -26,14 +26,6 @@ html, body {
 header{
     grid-area: header;
     background-color: #c81b37;
-    display:grid;
-    grid-template-columns:[headline1] 3.5em [headline2] 3em [headline3] 1fr [headline4] 3em [headline5] 3em [headline6] 2.5em [headline7];
-    grid-template-rows: [headrow1] 0.25em [headrow2] 3em [headrow3] 0.25em [headrow4];
-    grid-template-areas:
-        ". . . . . ."
-        ". logo tag-line language lines ."
-        ". . . . . .";
-    align-items: center;
 }
 
 section{
@@ -51,98 +43,7 @@ footer{
     background-color: yellow;
 }
 
-.logo{
-    grid-area: logo;
-}
 
-.tag-line{
-    grid-area: tag-line;
-}
-
-.lines{
-    grid-area: lines;
-    width: 2em;
-    height: 2em;
-}
-
-.language{
-    grid-area: language;
-}
-
-.languageIcon {
-    width:2em;
-    height:2em;
-    grid-area: language;
-}
-
-.drop-menu {
-    list-style: none;
-    box-shadow: 0 -2px 8px NaNpx rgba(0,0,0,0.22);
-    background-color: #1F2838;
-    width: 10.75em;
-    padding:0;
-    display:none;
-    flex-direction: column;
-    border-radius: 0.25em;
-    position: absolute;
-    margin: .5em 5.8em 0 0 ;
-    right:0;
-    transition-duration: 0.5s;
-}
-
-.language:hover > .drop-menu{
-    display: flex;
-}
-
-.drop-menu:before {
-    content: " ";
-    width: 11px;
-    height: 11px;
-    position: absolute;
-    vertical-align: top;
-    margin-top: -10px;
-    margin-right: 20px;
-    right: 1px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #1F2838;
-  
-}
-
-
-.drop-menu li{
-    color: #FFFFFFFF;
-    height: 1.75em;	
-    width: 10.75em;
-    padding-left: 12px;
-    padding-top:5px;
-    padding-bottom:5px;
-    flex:1;
-    list-style: none;
-    cursor:pointer;
-    text-decoration: none;
-}
-
-.drop-menu li:link {
-    text-decoration: none;
-    color: white;
-}
-
-.drop-menu li:hover {
-    background-color: #C81B37;
-}
-
-.top{
-    margin-top: 0.75em;
-}
-
-.bottom{
-    margin-bottom: 0.75em;
-}
-
-.drop-menu-hover{
-    position:relative;
-}
 
 
 @media screen and (min-width:1200px) {
