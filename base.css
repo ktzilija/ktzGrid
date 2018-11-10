@@ -7,9 +7,8 @@ html, body {
     font:1em/1.5 'Roboto',sans-serif;
     height: 100%;
 }
-p{
-    display:inline;
-}
+
+
 .container {
     display:grid;
     grid-template-columns: [first-line] 1fr [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] ;
@@ -92,7 +91,6 @@ footer{
 .fb-like {
     grid-column: second-line / third-line;
     grid-row: fourth-row / fifth-row;
-    height: 1em;
 }
 
 .slack{
