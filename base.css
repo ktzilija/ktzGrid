@@ -16,7 +16,7 @@ html, body {
 .container {
     display:grid;
     grid-template-columns: [first-line] 1fr [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] ;
-    grid-template-rows: 7em 76.5em 1fr 21.5em ;
+    grid-template-rows: 7em 76.5em 1fr 47em ;
     height: 100%;
     width: 100%;
     grid-template-areas:
@@ -31,7 +31,7 @@ header{
     grid-area: header;
     background-color: var(--crvena);
     display:grid;
-    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 7.5em [eighth-line] 4em [ninth-line];
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 7.5em [eighth-line] 4em;
     grid-template-rows: 1.75em 3.5em 1.75em;
     grid-template-areas:
         ". . . . . . . ."
@@ -44,9 +44,7 @@ section{
     grid-area: section;
     background-color: var(--crvena);
     display: grid;
-    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 2em [forth-line];
-    grid-template-rows: [first-row] 0em [second-row] 28em [third-row] 18em [fourth-row] 4em [fifth-row] 1fr [sixth-row];
-    row-gap: 3.5em;
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 4em [forth-line];
 }
 
 article{
@@ -57,6 +55,10 @@ article{
 
 footer{
     grid-area: footer;
+    background-color: #383838;
+    margin-top: 4em;
+    display:grid;
+    grid-template-columns: [first-line] 4em [second-line] 3.5em [third-line] 1.5em [fourth-line] 1fr [fifth-line] 4em [sixth-line];
 }
 
 .logo{
@@ -84,27 +86,24 @@ footer{
 #naslov {
     color:#FFF;
     grid-column: second-line / third-line;
-    grid-row: second-row / third-row;
     font-size: 6em;
-    margin: 0;
+    margin-bottom: 0;
 }
 
 #podnaslov {
     color: #FFF;
     grid-column: second-line / third-line;
-    grid-row: third-row / fourth-row;
     font-size:3em;
-    margin:0;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .fb-like {
     grid-column: second-line / third-line;
-    grid-row: fourth-row / fifth-row;
 }
 
 .slack{
     grid-column: second-line / third-line;
-    grid-row: fifth-row / sixth-row;
 }
 
 .title, .content, .email-input{
@@ -121,18 +120,163 @@ footer{
     font-size: 2em;
 }
 
-.btn-1, .email-input{
+.btn-1{
     grid-column: second-line / third-line;
     color: var(--crvena);
     border: 1px solid var(--crvena);
     border-radius: .25em;
-    padding: 8px 12px;
     text-decoration: none;
     text-align: center;
-    width: 24em;
+    width:22em;
+    margin-top: 1em;
 }
 
+.btn-2{
+    grid-column: second-line / third-line;
+    color: var(--crvena);
+    border: 1px solid var(--crvena);
+    border-radius: .25em;
+    text-decoration: none;
+    text-align: center;
+    width:26.875em;
+    margin-top: 1em;
+}
 
+.btn-1-content{
+    padding: 8px 12px;
+    font-size: 2em;
+    margin:0;
+}
+
+.email-input{
+    grid-column: second-line / third-line;
+    border: 1px solid var(--crvena);
+    border-radius: .25em;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 2em;
+    margin-top: 1rem;
+    color:#696464;
+}
+
+.zamphyr, .mozilla, .sap{
+    grid-column: second-line / third-line;
+    justify-self: center;
+    margin-top:4em;
+ }
+
+.zamphyr-png{
+    width:14.5em;
+    height:14.5em;
+}
+
+.mozilla-png{
+    width:21.75em;
+    height:8.25em;
+}
+
+.sap-png{
+    height:9.375em;
+    width:18.75em;
+}
+
+ .middle-content{
+     font-size:2em;
+     grid-column: second-line / third-line;
+     justify-self: center;
+     margin-bottom: 0;
+ }
+
+ .footer-content{
+     color:#FFF;
+     margin:0;
+ }
+
+.logo-footer{
+    grid-column: second-line / third-line;
+    margin:2em 0 0 0;
+}
+
+.ktz{
+    grid-column: fourth-line / fifth-line;
+    font-size:2.5em;
+    align-self:center;
+}
+
+.pratinas{
+    grid-column: fourth-line / fifth-line;
+    align-self:start;
+    font-size:2em;
+}
+
+.email-input2{
+    grid-column: fourth-line / fifth-line;
+    align-self:start;
+    width:20em;
+    height:2em;
+    background-color:#383838;
+    border: 1px solid #FFF;
+    border-radius: .25em;
+    font-size:2em;
+    color:#696464;
+    padding: 8px 12px;
+    margin: 15px 0;
+}
+
+.onama{
+    grid-column: fourth-line / fifth-line;
+    align-self:end;
+    font-size:2em;
+}
+
+.blog{
+    grid-column: fourth-line / fifth-line;
+    align-self:end;
+    font-size:2em;
+}
+
+.kontakt{
+    grid-column: fourth-line / fifth-line;
+    align-self:end;
+    font-size:2em;
+}
+
+.informacije{
+    grid-column: fourth-line / fifth-line;
+    align-self:end;
+    font-size:2em;
+}
+
+.icons{
+    grid-column: fourth-line / fifth-line;
+    margin-top:2em;
+}
+
+.fb{
+    width:3em;
+    height:3em;
+}
+
+.slack-icon{
+    margin-left:2em;
+    width:3em;
+    height:3em;
+}
+
+.fb-png {
+    width:3em;
+    height:3em;
+}
+
+.slack-png{
+    width:3em;
+    height:3em;
+}
+
+.footer-link{
+    text-decoration:none;
+    color:#FFF;
+}
 @media screen and (min-width:1200px) {
     .container{
         margin: 0 ;
