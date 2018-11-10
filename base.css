@@ -1,3 +1,7 @@
+:root {
+    --crvena:#c81b37;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
   }
@@ -12,7 +16,7 @@ html, body {
 .container {
     display:grid;
     grid-template-columns: [first-line] 1fr [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] ;
-    grid-template-rows: 8.5em 144em 1fr 21.5em ;
+    grid-template-rows: 7em 76.5em 1fr 21.5em ;
     height: 100%;
     width: 100%;
     grid-template-areas:
@@ -25,10 +29,10 @@ html, body {
 
 header{
     grid-area: header;
-    background-color: #c81b37;
+    background-color: var(--crvena);
     display:grid;
     grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 1fr [fourth-line] 1fr [fifth-line] 1fr [sixth-line] 1fr [seventh-line] 7.5em [eighth-line] 4em [ninth-line];
-    grid-template-rows: 2.5em 3.5em 2.5em;
+    grid-template-rows: 1.75em 3.5em 1.75em;
     grid-template-areas:
         ". . . . . . . ."
         ". logo . . . translate lines ."
@@ -38,15 +42,17 @@ header{
 
 section{
     grid-area: section;
-    background-color: #c81b37;
+    background-color: var(--crvena);
     display: grid;
-    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line];
-    grid-template-rows: [first-row] 0em [second-row] 32em [third-row] 32em [fourth-row] 16em [fifth-row] 1fr [sixth-row];
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 2em [forth-line];
+    grid-template-rows: [first-row] 0em [second-row] 28em [third-row] 18em [fourth-row] 4em [fifth-row] 1fr [sixth-row];
     row-gap: 3.5em;
 }
 
 article{
     grid-area: article;
+    display:grid;
+    grid-template-columns: [first-line] 4em [second-line] 1fr [third-line] 4em [forth-line];
 }
 
 footer{
@@ -56,6 +62,9 @@ footer{
 .logo{
     grid-area: logo;
     margin: 0;
+}
+
+.logo-svg{
     width: 3.5em;
     height: 3.5em;
 }
@@ -76,7 +85,7 @@ footer{
     color:#FFF;
     grid-column: second-line / third-line;
     grid-row: second-row / third-row;
-    font-size: 7em;
+    font-size: 6em;
     margin: 0;
 }
 
@@ -96,6 +105,31 @@ footer{
 .slack{
     grid-column: second-line / third-line;
     grid-row: fifth-row / sixth-row;
+}
+
+.title, .content {
+    grid-column: second-line / third-line;
+    margin-bottom: 0;
+}
+
+.title {
+    font-size: 3em;
+    color: var(--crvena);
+}
+
+.content {
+    font-size: 2em;
+}
+
+.btn-1{
+    grid-column: second-line / third-line;
+    color: var(--crvena);
+    border: 1px solid var(--crvena);
+    border-radius: .25em;
+    padding: 8px 12px;
+    text-decoration: none;
+    text-align: center;
+    width: 24em;
 }
 
 @media screen and (min-width:1200px) {
