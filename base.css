@@ -107,7 +107,7 @@ footer{
     grid-row: fifth-row / sixth-row;
 }
 
-.title, .content {
+.title, .content, .email-input{
     grid-column: second-line / third-line;
     margin-bottom: 0;
 }
@@ -121,7 +121,7 @@ footer{
     font-size: 2em;
 }
 
-.btn-1{
+.btn-1, .email-input{
     grid-column: second-line / third-line;
     color: var(--crvena);
     border: 1px solid var(--crvena);
@@ -131,6 +131,7 @@ footer{
     text-align: center;
     width: 24em;
 }
+
 
 @media screen and (min-width:1200px) {
     .container{
